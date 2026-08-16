@@ -1,0 +1,95 @@
+<?php declare(strict_types=1);
+
+// Valid: Constants in same group without blank lines
+class ValidConstGroup {
+	public const STATUS_INVALID = 'invalid';
+	public const STATUS_OK = 'ok';
+
+
+	public string $name = 'demo';
+}
+
+// Valid: Static properties in same group without blank lines
+class ValidStaticGroup {
+	public static array $defaultConfig = [];
+	protected static array $config = [];
+
+
+	public string $name = 'demo';
+}
+
+// Valid: Properties in same group without blank lines
+class ValidPropertyGroup {
+	public string $description = 'demo description';
+	public string $name = 'demo';
+}
+
+// Valid: Methods with 1 blank line
+class ValidMethodsOneLine {
+	public function first(): void {
+	}
+
+
+	public function second(): void {
+	}
+}
+
+// Valid: Methods with 2 blank lines
+class ValidMethodsTwoLines {
+	public function first(): void {
+	}
+
+
+	public function second(): void {
+	}
+}
+
+// Valid: Docblock counted as member start
+class ValidDocblockBoundary {
+	public const TYPE = 'demo';
+
+
+	/** @var string */
+	public string $name = 'x';
+}
+
+// Invalid: Only 1 blank line between different groups (const -> property)
+class InvalidGroupSpacing {
+	public const STATUS_OK = 'ok';
+
+	public string $name = 'demo';
+}
+
+// Invalid: No blank line between methods
+class InvalidMethodsNoLine {
+	public function first(): void {
+	}
+	public function second(): void {
+	}
+}
+
+// Invalid: More than 2 blank lines between methods
+class InvalidMethodsTooMany {
+	public function first(): void {
+	}
+
+
+
+	public function second(): void {
+	}
+}
+
+// Invalid: Blank line within same property group
+class InvalidPropertyGroupSpacing {
+	public string $first = 'a';
+
+	public string $second = 'b';
+}
+
+// Invalid: Only 1 blank line before docblock (different groups)
+class InvalidDocblockBoundary {
+	public const TYPE = 'demo';
+
+	/** @var string */
+	public string $name = 'x';
+}

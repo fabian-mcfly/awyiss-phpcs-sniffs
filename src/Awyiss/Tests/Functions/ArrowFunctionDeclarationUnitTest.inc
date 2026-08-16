@@ -1,0 +1,19 @@
+<?php declare(strict_types=1);
+
+// Valid: No space after fn, space around =>
+$mapper = fn($x) => $x + 1;
+
+// Valid: Multiple parameters
+$adder = fn($a, $b) => $a + $b;
+
+// Invalid: Space after fn
+$mapper = fn ($x) => $x;
+
+// Invalid: No space before =>
+$mapper = fn($x)=> $x;
+
+// Invalid: No space after =>
+$mapper = fn($x) =>$x;
+
+// Invalid: Combined issues
+$mapper = fn ($x) 	=>	 $x;

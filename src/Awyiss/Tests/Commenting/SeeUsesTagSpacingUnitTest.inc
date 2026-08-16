@@ -1,0 +1,32 @@
+<?php declare(strict_types=1);
+
+// Valid: Single space after @see
+/**
+ * @see self::demo
+ */
+function validSeeSpacing(): void {
+}
+
+
+// Valid: Single space after @uses
+/**
+ * @uses self::helper
+ */
+function validUsesSpacing(): void {
+}
+
+
+// Invalid: Multiple spaces after @see
+/**
+ * @see   self::demo
+ */
+function invalidSeeSpacing(): void {
+}
+
+
+// Invalid: Multiple spaces after @uses
+/**
+ * @uses  self::helper
+ */
+function invalidUsesSpacing(): void {
+}

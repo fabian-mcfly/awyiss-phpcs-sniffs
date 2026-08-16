@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="Awyiss Local">
+    <description>Local PHPCS config for developing this sniff package.</description>
+
+    <file>src</file>
+
+    <arg name="extensions" value="php"/>
+    <arg value="p"/>
+
+    <rule ref="./ruleset.xml"/>
+</ruleset>
+
