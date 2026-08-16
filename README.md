@@ -5,7 +5,7 @@ PHPCS standard with custom rules for Awyiss projects.
 ## Installation
 
 ```bash
-composer require --dev awyiss/phpcs-sniffs
+composer require fabian-mcfly/awyiss-phpcs-sniffs
 ```
 
 ## Usage
@@ -22,7 +22,8 @@ vendor/bin/phpcs --standard=Awyiss src
 
 ### Classes
 
-- `ClassMemberSpacingSniff`: Enforces blank lines between class members. Same groups have no blank line, different groups have two blank lines, methods have one or two blank lines.
+- `ClassMemberSpacingSniff`: Enforces blank lines between class members. Same groups have no blank line,
+ different groups have two blank lines, methods have one or two blank lines.
 
 ### Commenting
 
@@ -31,11 +32,13 @@ vendor/bin/phpcs --standard=Awyiss src
 
 ### Functions
 
-- `ArrowFunctionDeclarationSniff`: Validates arrow function (`fn`) formatting. No space before `(`, exactly one space around `=>`, and clean indentation for wrapped lines.
+- `ArrowFunctionDeclarationSniff`: Validates arrow function (`fn`) formatting. No space before `(`, exactly one space around `=>`,
+ and clean indentation for wrapped lines.
 
 ### Operators
 
-- `MethodChainingSniff`: Validates method chains. Long or multiline chains must be wrapped and indented consistently, including semicolon placement.
+- `MethodChainingSniff`: Validates method chains. Long or multiline chains must be wrapped and indented consistently,
+ including semicolon placement.
 
 ### WhiteSpace
 
