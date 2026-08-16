@@ -5,7 +5,7 @@ PHPCS standard with custom rules for Awyiss projects.
 ## Installation
 
 ```bash
-composer require fabian-mcfly/awyiss-phpcs-sniffs
+composer require awyiss/phpcs-sniffs
 ```
 
 ## Usage
